@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<!-- lang="pt-BR": informa ao leitor de tela o idioma da página para pronúncia correta -->
+<html lang="pt-BR">
+<head>
+    <!-- charset UTF-8: garante leitura correta de caracteres especiais (ã, ç, é...) -->
+    <meta charset="UTF-8">
+    <!-- viewport: permite zoom e reflow correto em dispositivos móveis para usuários com baixa visão -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFSCars - Chevrolet Onix</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<!-- <nav>: elemento semântico que identifica área de navegação para leitores de tela -->
+<nav class="navbar navbar-main">
+    <div class="container">
+        <a class="navbar-brand" href="marketplace.html">
+            <i class="fas fa-tachometer-alt" style="color:#00c4e0;"></i> NFSCars
+        </a>
+        <div class="d-flex align-items-center mx-auto gap-1">
+            <a class="nav-link" href="marketplace.html">Comprar</a>
+            <a class="nav-link" href="cadastro-veiculo.html">Vender</a>
+            <a class="nav-link" href="#">Lojas</a>
+        </div>
+        <div class="d-flex align-items-center gap-3">
+            <a href="#" class="text-white fs-5"><i class="far fa-heart"></i></a>
+            <button class="btn btn-entrar"><i class="fas fa-user me-1"></i> Entrar</button>
+        </div>
+    </div>
+</nav>
+
+<!-- MAIN -->
+<div class="container py-4">
+    <div class="row g-4">
+
+        <!-- COLUNA ESQUERDA -->
+        <div class="col-lg-8">
+
+            <!-- GALERIA -->
+            <div class="row g-2 mb-3">
+                <div class="col-md-8">
+                    <div class="detail-main-img-wrap">
+                        <!-- alt="Chevrolet Onix": texto alternativo descritivo lido por leitores de tela e exibido se a imagem falhar -->
+                        <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&q=80"
+                             class="detail-main-img" alt="Chevrolet Onix">
+                        <div class="gallery-counter">1 / 5</div>
+                        <button class="gallery-nav gallery-prev"><i class="fas fa-chevron-left"></i></button>
+                        <button class="gallery-nav gallery-next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="detail-thumbs">
+                        <div class="detail-thumb-wrap">
+                            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=400&q=80"
+                                 class="detail-thumb-img" alt="">
+                        </div>
+                        <div class="detail-thumb-wrap">
+                            <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=400&q=80"
+                                 class="detail-thumb-img" alt="">
+                            <div class="thumb-more">+3</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TÍTULO E SPECS -->
+            <div class="detail-card">
+                <div class="d-flex justify-content-between align-items-start">
+                    <div>
+                        <h2 class="detail-car-title">Chevrolet <span class="accent">Onix</span></h2>
+                        <p class="detail-car-sub">1.4 Aut. Automático</p>
+                    </div>
+                    <button class="heart-btn-detail"><i class="far fa-heart text-danger"></i></button>
+                </div>
+
+                <div class="row g-0 specs-grid">
+                    <div class="col-6 col-md-3 spec-item">
+                        <div class="spec-label">Cidade</div>
+                        <div class="spec-value">São Paulo (SP)</div>
+                    </div>
+                    <div class="col-6 col-md-3 spec-item">
+                        <div class="spec-label">Ano</div>
+                        <div class="spec-value">2024/2025</div>
+                    </div>
+                    <div class="col-6 col-md-3 spec-item">
+                        <div class="spec-label">KM</div>
+                        <div class="spec-value">39.800</div>
+                    </div>
+                    <div class="col-6 col-md-3 spec-item">
+                        <div class="spec-label">Câmbio</div>
+                        <div class="spec-value">Manual</div>
+                    </div>
+                    <div class="col-6 col-md-3 spec-item">
+                        <div class="spec-label">Carroceria</div>
+                        <div class="spec-value">Hatch</div>
+                    </div>
+                    <div class="col-6 col-md-3 spec-item">
+                        <div class="spec-label">Combustível</div>
+                        <div class="spec-value">Gasolina/Álcool</div>
+                    </div>
+                    <div class="col-6 col-md-3 spec-item">
+                        <div class="spec-label">Final da Placa</div>
+                        <div class="spec-value">5</div>
+                    </div>
+                    <div class="col-6 col-md-3 spec-item">
+                        <div class="spec-label">Cor</div>
+                        <div class="spec-value">Branco</div>
+                    </div>
+                    <div class="col-3 spec-item" style="border-bottom:none;">
+                        <div class="spec-label">Aceita Troca</div>
+                        <div class="spec-value">Sim</div>
+                    </div>
+                    <div class="col-3 spec-item" style="border-bottom:none;">
+                        <div class="spec-label">IPVA</div>
+                        <div class="spec-value">Pago</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ITENS DO VEÍCULO -->
+            <div class="detail-card">
+                <h6 class="detail-section-title">Itens do Veículo</h6>
+                <div class="row g-1">
+                    <div class="col-4"><div class="veiculo-item"><i class="fas fa-check-circle"></i> Alarme</div></div>
+                    <div class="col-4"><div class="veiculo-item"><i class="fas fa-check-circle"></i> Freio ABS</div></div>
+                    <div class="col-4"><div class="veiculo-item"><i class="fas fa-check-circle"></i> Controle de Tração</div></div>
+                    <div class="col-4"><div class="veiculo-item"><i class="fas fa-check-circle"></i> Bancos de couro</div></div>
+                    <div class="col-4"><div class="veiculo-item"><i class="fas fa-check-circle"></i> Ar Condicionado</div></div>
+                    <div class="col-4"><div class="veiculo-item"><i class="fas fa-check-circle"></i> Air bag</div></div>
+                    <div class="col-4"><div class="veiculo-item"><i class="fas fa-check-circle"></i> Travas Elétricas</div></div>
+                    <div class="col-4"><div class="veiculo-item"><i class="fas fa-check-circle"></i> Computador de Bordo</div></div>
+                    <div class="col-4"><div class="veiculo-item"><i class="fas fa-check-circle"></i> Desembaçador Traseiro</div></div>
+                </div>
+            </div>
+
+            <!-- SOBRE O VENDEDOR -->
+            <div class="detail-card">
+                <div class="row g-3">
+                    <div class="col-6">
+                        <h6 class="detail-section-title">Sobre o Vendedor</h6>
+                        <div class="d-flex align-items-center gap-2">
+                            <div class="vendor-av">PM</div>
+                            <div>
+                                <div class="vendor-name">Prime Motors</div>
+                                <div class="vendor-loc"><i class="fas fa-map-marker-alt"></i> São Paulo (SP)</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <h6 class="detail-section-title">Consultas</h6>
+                        <div class="vendor-stat"><i class="fas fa-calendar-alt"></i> Desde 07/2025 NFSCars</div>
+                        <div class="vendor-stat"><i class="fas fa-car"></i> Anunciou 797 vezes na NFSCars</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- COLUNA DIREITA - PREÇO E CONTATO -->
+        <div class="col-lg-4">
+            <div class="contact-panel">
+                <div class="detail-price-val">R$83.900</div>
+                <p class="contact-label">Envie uma mensagem ao vendedor</p>
+                <!-- type="text/tel/email": define o tipo correto de teclado virtual em celulares e ativa validação nativa do browser -->
+                <div class="mb-2">
+                    <input type="text" class="form-control form-control-sm" placeholder="Nome">
+                </div>
+                <div class="mb-2">
+                    <!-- type="tel": abre teclado numérico em dispositivos móveis -->
+                    <input type="tel" class="form-control form-control-sm" placeholder="Telefone">
+                </div>
+                <div class="mb-2">
+                    <!-- type="email": valida formato de e-mail e abre teclado com @ em dispositivos móveis -->
+                    <input type="email" class="form-control form-control-sm" placeholder="Email">
+                </div>
+                <div class="mb-3">
+                    <!-- <textarea>: campo de texto multi-linha; placeholder sugere mensagem padrão ao usuário -->
+                    <textarea class="form-control form-control-sm" rows="4"
+                        placeholder="Olá! Tenho interesse neste veículo. Por favor, entre em contato."></textarea>
+                </div>
+                <button class="btn btn-enviar w-100">Enviar Mensagem</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- MAIS ANÚNCIOS DESSE VENDEDOR -->
+    <div class="mt-4">
+        <h5 class="mais-anuncios-title">Mais Anúncios Desse Vendedor</h5>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="car-card">
+                    <div class="car-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=400&q=80" alt="Chevrolet Onix">
+                        <button class="heart-btn"><i class="far fa-heart text-danger" style="font-size:0.78rem;"></i></button>
+                    </div>
+                    <div class="car-body">
+                        <div class="car-name">Chevrolet Onix</div>
+                        <div class="car-ver">1.4 manual</div>
+                        <div class="car-specs">
+                            <span><i class="fas fa-calendar-alt"></i>2024/2025</span>
+                            <span><i class="fas fa-road"></i>39.800 KM</span>
+                        </div>
+                        <div class="car-loc"><i class="fas fa-map-marker-alt"></i> São Paulo (SP)</div>
+                        <div class="car-price text-danger">R$289.900</div>
+                        <a href="detalhes-veiculo.html" class="btn btn-detalhes">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="car-card">
+                    <div class="car-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=400&q=80" alt="Chevrolet Onix">
+                        <button class="heart-btn"><i class="far fa-heart text-danger" style="font-size:0.78rem;"></i></button>
+                    </div>
+                    <div class="car-body">
+                        <div class="car-name">Chevrolet Onix</div>
+                        <div class="car-ver">1.4 manual</div>
+                        <div class="car-specs">
+                            <span><i class="fas fa-calendar-alt"></i>2024/2025</span>
+                            <span><i class="fas fa-road"></i>39.800 KM</span>
+                        </div>
+                        <div class="car-loc"><i class="fas fa-map-marker-alt"></i> São Paulo (SP)</div>
+                        <div class="car-price text-danger">R$289.900</div>
+                        <a href="detalhes-veiculo.html" class="btn btn-detalhes">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="car-card">
+                    <div class="car-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=400&q=80" alt="Chevrolet Onix">
+                        <button class="heart-btn"><i class="far fa-heart text-danger" style="font-size:0.78rem;"></i></button>
+                    </div>
+                    <div class="car-body">
+                        <div class="car-name">Chevrolet Onix</div>
+                        <div class="car-ver">1.4 manual</div>
+                        <div class="car-specs">
+                            <span><i class="fas fa-calendar-alt"></i>2024/2025</span>
+                            <span><i class="fas fa-road"></i>39.800 KM</span>
+                        </div>
+                        <div class="car-loc"><i class="fas fa-map-marker-alt"></i> São Paulo (SP)</div>
+                        <div class="car-price text-danger">R$289.900</div>
+                        <a href="detalhes-veiculo.html" class="btn btn-detalhes">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="car-card">
+                    <div class="car-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=400&q=80" alt="Chevrolet Onix">
+                        <button class="heart-btn"><i class="far fa-heart text-danger" style="font-size:0.78rem;"></i></button>
+                    </div>
+                    <div class="car-body">
+                        <div class="car-name">Chevrolet Onix</div>
+                        <div class="car-ver">1.4 manual</div>
+                        <div class="car-specs">
+                            <span><i class="fas fa-calendar-alt"></i>2024/2025</span>
+                            <span><i class="fas fa-road"></i>39.800 KM</span>
+                        </div>
+                        <div class="car-loc"><i class="fas fa-map-marker-alt"></i> São Paulo (SP)</div>
+                        <div class="car-price text-danger">R$289.900</div>
+                        <a href="detalhes-veiculo.html" class="btn btn-detalhes">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

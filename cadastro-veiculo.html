@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<!-- lang="pt-BR": informa ao leitor de tela o idioma da página para pronúncia correta -->
+<html lang="pt-BR">
+<head>
+    <!-- charset UTF-8: garante leitura correta de caracteres especiais (ã, ç, é...) -->
+    <meta charset="UTF-8">
+    <!-- viewport: permite zoom e reflow correto em dispositivos móveis para usuários com baixa visão -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFSCars - Cadastrar Veículo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body class="cadastro">
+
+<!-- TOP NAV -->
+<!-- <nav>: elemento semântico que identifica área de navegação para leitores de tela -->
+<nav class="navbar top-nav py-0">
+    <div class="container-fluid px-4">
+        <a class="navbar-brand" href="marketplace.html">
+            <i class="fas fa-tachometer-alt" style="color:#00c4e0;"></i> NFSCars
+        </a>
+        <ul class="navbar-nav flex-row">
+            <li class="nav-item"><a class="nav-link" href="marketplace.html"><i class="fas fa-th-large"></i><span>Dashboard</span></a></li>
+            <li class="nav-item active"><a class="nav-link" href="cadastro-veiculo.html"><i class="fas fa-car"></i><span>Veículos</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-users"></i><span>Leads</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-dollar-sign"></i><span>Vendas</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-chart-bar"></i><span>Relatórios</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-cog"></i><span>Configurações</span></a></li>
+        </ul>
+        <div class="user-badge">
+            <div class="text-end">
+                <div class="user-name">Auto Norte Multimarcas</div>
+                <div class="user-type">Agência</div>
+            </div>
+            <div class="user-avatar">XP</div>
+        </div>
+    </div>
+</nav>
+
+<!-- PAGE -->
+<div class="page-wrap">
+    <div class="container-fluid px-4">
+
+        <!-- Breadcrumb row -->
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <!-- breadcrumb: trilha de navegação semântica em <ol> (lista ordenada) que informa ao leitor de tela a hierarquia de páginas -->
+            <nav><ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="marketplace.html">Veículos</a></li>
+                <!-- breadcrumb-item active: indica a página atual na trilha -->
+                <li class="breadcrumb-item active">Cadastrar / Listar Veículo</li>
+            </ol></nav>
+            <button class="btn btn-voltar" onclick="window.location='marketplace.html'"><i class="fas fa-arrow-left me-1"></i> Voltar para lista</button>
+        </div>
+
+        <h4 class="fw-bold mb-1">Cadastrar Veículo</h4>
+        <p class="text-muted mb-4" style="font-size:0.84rem;">Preencha as informações do veículo para criar seu anúncio.</p>
+
+        <div class="row g-4">
+
+            <!-- FORM -->
+            <div class="col-lg-8">
+
+                <!-- 1. Informações -->
+                <div class="form-section">
+                    <div class="sec-title"><span class="sec-num">1</span> Informações do veículo</div>
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <!-- <label>: associa descrição ao campo; leitores de tela anunciam o label ao focar no select -->
+                            <!-- <span class="req">: indica campo obrigatório visualmente -->
+                            <label class="form-label">Marca <span class="req">(obrigatório)</span></label>
+                            <select class="form-select"><option>Selecione a marca</option><option>Chevrolet</option><option>Toyota</option><option>Honda</option><option>Fiat</option><option>Volkswagen</option></select>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Modelo <span class="req">(obrigatório)</span></label>
+                            <select class="form-select"><option>Selecione o modelo</option></select>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Versão</label>
+                            <select class="form-select"><option>Selecione a versão</option></select>
+                        </div>
+                    </div>
+                    <div class="row g-3 mt-0">
+                        <div class="col-md-4">
+                            <label class="form-label">Ano <span class="req">(obrigatório)</span></label>
+                            <select class="form-select"><option>Selecione o ano</option><option>2025/2025</option><option>2024/2025</option><option>2023/2024</option><option>2022/2023</option><option>2021/2022</option></select>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Quilometragem <span class="req">(obrigatório)</span></label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Ex.: 48.000">
+                                <span class="input-group-text">km</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Preço</label>
+                            <div class="input-group">
+                                <span class="input-group-text">R$</span>
+                                <input type="text" class="form-control" placeholder="Ex.: 89.900,00">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row g-3 mt-0">
+                        <div class="col-md-4">
+                            <label class="form-label">Marca <span class="req">(obrigatório)</span></label>
+                            <select class="form-select"><option>Selecione a cor</option><option>Branco</option><option>Preto</option><option>Prata</option><option>Vermelho</option><option>Azul</option></select>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Câmbio <span class="req">(obrigatório)</span></label>
+                            <select class="form-select"><option>Selecione o câmbio</option><option>Automático</option><option>Manual</option><option>CVT</option></select>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Combustível <span class="req">(obrigatório)</span></label>
+                            <select class="form-select"><option>Selecione o combustível</option><option>Flex</option><option>Gasolina</option><option>Diesel</option><option>Elétrico</option><option>Híbrido</option></select>
+                        </div>
+                    </div>
+                    <div class="row g-3 mt-0">
+                        <div class="col-md-6">
+                            <label class="form-label">Placa/Final</label>
+                            <input type="text" class="form-control" placeholder="Ex.: ABC1234 ou Final 3">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Chassi <span class="opt">(opcional)</span></label>
+                            <!-- placeholder="Ex.:...": exemplo de formato esperado, auxilia usuários com dificuldade cognitiva -->
+                        <input type="text" class="form-control" placeholder="Ex.: 9BW22327V7V004351">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Descrição -->
+                <div class="form-section">
+                    <div class="sec-title"><span class="sec-num">2</span> Descrição do veículo</div>
+                    <div class="row g-3">
+                        <div class="col-md-8">
+                            <label class="form-label">Descrição <span class="req">(obrigatório)</span></label>
+                            <textarea class="form-control" rows="7"
+                                placeholder="Descreva os principais diferenciais, opcionais e o estado geral do veículo..."></textarea>
+                            <div class="text-end mt-1" style="font-size:0.72rem;color:#ccc;">0/1000 caracteres</div>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">
+                                Destaques do veículo
+                                <i class="fas fa-info-circle ms-1" style="color:#ccc;font-size:0.72rem;"></i>
+                            </label>
+                            <!-- form-check-input: classe Bootstrap que estiliza o checkbox e melhora área de foco visível -->
+                            <!-- type="checkbox": informa ao leitor de tela que é uma caixa de seleção -->
+                            <div class="dest-item"><input type="checkbox" class="form-check-input"> Aceita troca</div>
+                            <div class="dest-item"><input type="checkbox" class="form-check-input"> Único dono</div>
+                            <div class="dest-item"><input type="checkbox" class="form-check-input"> IPVA Pago</div>
+                            <div class="dest-item"><input type="checkbox" class="form-check-input"> Manual do proprietário</div>
+                            <div class="dest-item"><input type="checkbox" class="form-check-input"> Alienação em dia</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Fotos -->
+                <div class="form-section">
+                    <div class="sec-title"><span class="sec-num">3</span> Fotos do veículo</div>
+                    <p style="font-size:0.8rem;color:#888;margin-top:-10px;margin-bottom:14px;">
+                        Adicione fotos reais do veículo. Recomendamos pelo menos 8 imagens.
+                    </p>
+                    <!-- photo-drop: área de upload interativa; cursor:pointer no CSS sinaliza interatividade ao usuário -->
+                    <div class="photo-drop mb-3">
+                        <i class="fas fa-image d-block"></i>
+                        <p>Arraste e solte suas fotos aqui, ou clique para selecionar</p>
+                        <button class="btn btn-add-photo"><i class="fas fa-plus me-1"></i> Adicionar fotos</button>
+                    </div>
+                    <div class="d-flex gap-2 flex-wrap">
+                        <div class="thumb main">Principal</div>
+                        <div class="thumb"></div>
+                        <div class="thumb"></div>
+                        <div class="thumb"></div>
+                        <div class="thumb"></div>
+                        <div class="thumb"></div>
+                        <div class="thumb"></div>
+                    </div>
+                </div>
+
+                <!-- Action bar -->
+                <div class="action-bar">
+                    <button class="btn btn-rascunho">Salvar rascunho</button>
+                    <button class="btn btn-publicar">Publicar anúncio</button>
+                    <div class="sec-note">
+                        <i class="fas fa-lock"></i>
+                        Seus dados estão seguros. O anúncio será revisado antes da publicação.
+                    </div>
+                </div>
+            </div>
+
+            <!-- PREVIEW -->
+            <div class="col-lg-4">
+                <div class="preview-panel">
+                    <div class="prev-header">
+                        <span class="prev-title">Pré-visualização do anúncio</span>
+                        <span class="badge-rascunho">Rascunho</span>
+                    </div>
+
+                    <div class="prev-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=500&q=80"
+                             class="prev-img" alt="Honda Civic">
+                        <div class="prev-heart"><i class="far fa-heart text-danger" style="font-size:0.78rem;"></i></div>
+                    </div>
+
+                    <div class="prev-body">
+                        <div class="prev-name">Honda Civic</div>
+                        <div class="prev-specs">2021/2022 · 28,600 km · Flex · Automático</div>
+                        <div class="prev-price">R$ 144.900</div>
+                        <div class="prev-tags">
+                            <span class="prev-tag">Aceita troca</span>
+                            <span class="prev-tag">Único dono</span>
+                            <span class="prev-tag">IPVA Pago</span>
+                        </div>
+                        <div class="prev-loc"><i class="fas fa-map-marker-alt"></i> Salvador - BA</div>
+                        <div class="prev-sec">Sobre o veículo</div>
+                        <div class="ph-line" style="width:100%;"></div>
+                        <div class="ph-line" style="width:82%;"></div>
+                        <div class="ph-line" style="width:65%;"></div>
+                    </div>
+
+                    <div class="prev-contact">
+                        <div class="prev-ct-title">Contato da agência</div>
+                        <div class="dealer-row">
+                            <div class="dealer-av">XP</div>
+                            <div>
+                                <div class="dealer-name">Auto Norte Multimarcas</div>
+                                <span class="dealer-bdg">Revendedor premier</span>
+                            </div>
+                        </div>
+                        <div class="ct-row">
+                            <div class="ct-icon wa"><i class="fab fa-whatsapp"></i></div>
+                            <span>(11) 99999-9999</span>
+                            <small class="text-muted ms-auto" style="font-size:0.68rem;">WhatsApp</small>
+                        </div>
+                        <div class="ct-row">
+                            <div class="ct-icon ph"><i class="fas fa-phone"></i></div>
+                            <span>(11) 33333-3333</span>
+                        </div>
+                        <div class="ct-loc">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>Salvador - BA<br><span style="color:#ccc;">Atendimento seg. a Sex 08h às 18h</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

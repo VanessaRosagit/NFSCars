@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<!-- lang="pt-BR": informa ao leitor de tela o idioma da página para pronúncia correta -->
+<html lang="pt-BR">
+<head>
+    <!-- charset UTF-8: garante leitura correta de caracteres especiais (ã, ç, é...) -->
+    <meta charset="UTF-8">
+    <!-- viewport: permite zoom e reflow correto em dispositivos móveis para usuários com baixa visão -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFSCars - Encontre o carro ideal para você</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<!-- <nav>: elemento semântico que identifica área de navegação para leitores de tela -->
+<nav class="navbar navbar-main">
+    <div class="container">
+        <a class="navbar-brand" href="marketplace.html">
+            <i class="fas fa-tachometer-alt" style="color:#00c4e0;"></i> NFSCars
+        </a>
+        <div class="d-flex align-items-center mx-auto gap-1">
+            <a class="nav-link" href="marketplace.html">Comprar</a>
+            <a class="nav-link" href="cadastro-veiculo.html">Vender</a>
+            <a class="nav-link" href="#">Lojas</a>
+        </div>
+        <div class="d-flex align-items-center gap-3">
+            <a href="#" class="text-white fs-5"><i class="far fa-heart"></i></a>
+            <button class="btn btn-entrar"><i class="fas fa-user me-1"></i> Entrar</button>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<!-- <section>: elemento semântico que agrupa conteúdo relacionado, ajuda leitores de tela a navegar por seções -->
+<section class="hero-section">
+    <div class="container position-relative" style="z-index:2;">
+        <div class="row">
+            <div class="col-lg-6">
+                <h1 class="hero-title">
+                    Encontre o <span class="highlight">carro ideal</span><br>para você
+                </h1>
+                <p class="hero-subtitle">As melhores agências, os melhores veículos<br>e as melhores oportunidades em um só lugar.</p>
+                <div class="search-bar">
+                    <div class="d-flex gap-2 flex-wrap align-items-center">
+                        <!-- placeholder: dica de preenchimento visível; type="text" define o tipo de entrada para teclados virtuais e validação -->
+                        <input type="text" class="form-control flex-grow-1" placeholder="Toyota Camry" style="min-width:130px;">
+                        <select class="form-select" style="width:130px;">
+                            <option>Faixa de Preço</option>
+                            <option>Até R$50.000</option>
+                            <option>Até R$100.000</option>
+                            <option>Até R$200.000</option>
+                        </select>
+                        <select class="form-select" style="width:110px;">
+                            <option>Região</option>
+                            <option>São Paulo</option>
+                            <option>Rio de Janeiro</option>
+                            <option>Bahia</option>
+                        </select>
+                        <input type="text" class="form-control" placeholder="De" style="width:58px;">
+                        <input type="text" class="form-control" placeholder="Até" style="width:58px;">
+                        <button class="btn btn-buscar"><i class="fas fa-search me-1"></i> Buscar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- alt="Carro": texto alternativo lido por leitores de tela quando a imagem não carrega ou para deficientes visuais -->
+    <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=720&q=80"
+         class="hero-car-img" alt="Carro">
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+    <div class="container">
+        <div class="row justify-content-center g-3">
+            <div class="col-auto"><div class="trust-badge"><i class="fas fa-check-circle"></i><span>Veículos de Lojas Confiáveis</span></div></div>
+            <div class="col-auto"><div class="trust-badge"><i class="fas fa-balance-scale"></i><span>Compare Preços</span></div></div>
+            <div class="col-auto"><div class="trust-badge"><i class="fas fa-map-marker-alt"></i><span>Ofertas de Todo Brasil</span></div></div>
+            <div class="col-auto"><div class="trust-badge"><i class="fas fa-shield-alt"></i><span>Negociação Segura</span></div></div>
+        </div>
+    </div>
+</div>
+
+<!-- MAIN -->
+<div class="container py-4">
+    <div class="row g-3">
+
+        <!-- SIDEBAR -->
+        <div class="col-lg-3">
+            <div class="filter-sidebar">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                    <span class="filter-title">Filtros</span>
+                    <a href="#" style="font-size:0.8rem;color:#1a6eb5;">Limpar Tudo</a>
+                </div>
+
+                <!-- Novo/Usado -->
+                <div class="filter-section">
+                    <div class="filter-section-title">Novo / Usado</div>
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                        <!-- form-check: estrutura Bootstrap que vincula visualmente label ao checkbox, melhorando a área clicável e leitura por assistivos -->
+                        <div class="form-check mb-0">
+                            <!-- type="checkbox": informa ao leitor de tela que é uma caixa de seleção -->
+                            <input class="form-check-input" type="checkbox" checked>
+                            <!-- <label>: vincula texto descritivo ao controle, lido pelo leitor de tela ao focar no checkbox -->
+                            <label class="form-check-label">Usados</label>
+                        </div>
+                        <span class="cnt">(5.891)</span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="form-check mb-0">
+                            <input class="form-check-input" type="checkbox">
+                            <label class="form-check-label">Novos</label>
+                        </div>
+                        <span class="cnt">(584)</span>
+                    </div>
+                </div>
+
+                <!-- Marca -->
+                <div class="filter-section">
+                    <div class="filter-section-title">Marca</div>
+                    <div class="position-relative mb-2">
+                        <i class="fas fa-search position-absolute" style="left:9px;top:50%;transform:translateY(-50%);color:#bbb;font-size:0.75rem;"></i>
+                        <input type="text" class="form-control form-control-sm ps-4" placeholder="Buscar Marca">
+                    </div>
+                    <div class="brand-item"><label><input type="checkbox" class="form-check-input me-1"> Chevrolet</label><span class="cnt">(316)</span></div>
+                    <div class="brand-item"><label><input type="checkbox" class="form-check-input me-1"> Volkswagen</label><span class="cnt">(584)</span></div>
+                    <div class="brand-item"><label><input type="checkbox" class="form-check-input me-1"> Toyota</label><span class="cnt">(649)</span></div>
+                    <div class="brand-item"><label><input type="checkbox" class="form-check-input me-1"> Fiat</label><span class="cnt">(163)</span></div>
+                    <div class="brand-item"><label><input type="checkbox" class="form-check-input me-1"> Honda</label><span class="cnt">(79)</span></div>
+                    <a href="#" class="ver-todas mt-1 d-inline-block">+ Ver Todas</a>
+                </div>
+
+                <!-- Faixa de Preço -->
+                <div class="filter-section">
+                    <div class="filter-section-title">Faixa de Preço</div>
+                    <input type="range" class="form-range" min="5000" max="390000" value="200000">
+                    <div class="d-flex justify-content-between price-range">
+                        <span>R$5.000</span>
+                        <span style="color:#1a6eb5;font-size:0.75rem;">Selecionar Faixa</span>
+                        <span>R$390.000</span>
+                    </div>
+                </div>
+
+                <!-- Dropdowns -->
+                <div class="filter-section">
+                    <div class="filter-section-title">Ano</div>
+                    <select class="form-select form-select-sm"><option>Selecione o ano</option><option>2024/2025</option><option>2023/2024</option><option>2022/2023</option></select>
+                </div>
+                <div class="filter-section">
+                    <div class="filter-section-title">Câmbio</div>
+                    <select class="form-select form-select-sm"><option>Selecione o câmbio</option><option>Automático</option><option>Manual</option></select>
+                </div>
+                <div class="filter-section">
+                    <div class="filter-section-title">Combustível</div>
+                    <select class="form-select form-select-sm"><option>Selecione o combustível</option><option>Flex</option><option>Gasolina</option><option>Elétrico</option></select>
+                </div>
+                <div class="filter-section">
+                    <div class="filter-section-title">Quilometragem</div>
+                    <select class="form-select form-select-sm"><option>Selecione</option><option>Até 20.000 km</option><option>Até 50.000 km</option><option>Até 100.000 km</option></select>
+                </div>
+                <div class="filter-section">
+                    <div class="filter-section-title">Itens do Veículo</div>
+                    <select class="form-select form-select-sm"><option>Selecione</option><option>Ar condicionado</option><option>Direção hidráulica</option></select>
+                </div>
+                <div class="filter-section">
+                    <div class="filter-section-title">Cidade/Região</div>
+                    <select class="form-select form-select-sm"><option>Selecione</option><option>São Paulo</option><option>Rio de Janeiro</option></select>
+                </div>
+                <div class="filter-section">
+                    <div class="filter-section-title">Cor</div>
+                    <select class="form-select form-select-sm"><option>Selecione</option><option>Branco</option><option>Preto</option><option>Prata</option></select>
+                </div>
+            </div>
+        </div>
+
+        <!-- LISTINGS -->
+        <div class="col-lg-9">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <div class="results-count"><i class="fas fa-sort-amount-down me-1 text-muted" style="font-size:0.83rem;"></i> 1250 Anúncios Encontrados</div>
+                <div class="d-flex align-items-center gap-2">
+                    <span style="font-size:0.83rem;color:#666;">Ordenar Por:</span>
+                    <select class="sort-select form-select">
+                        <option>Mais Relevantes</option>
+                        <option>Menor Preço</option>
+                        <option>Maior Preço</option>
+                        <option>Mais Novo</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Card 1 -->
+                <div class="col-md-4">
+                    <div class="car-card">
+                        <div class="car-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=400&q=80" alt="Chevrolet Onix">
+                            <button class="heart-btn"><i class="far fa-heart text-danger" style="font-size:0.78rem;"></i></button>
+                        </div>
+                        <div class="car-body">
+                            <div class="car-name">Chevrolet Onix</div>
+                            <div class="car-ver">1.4 Automático</div>
+                            <div class="car-specs">
+                                <span><i class="fas fa-calendar-alt"></i>2024/2025</span>
+                                <span><i class="fas fa-road"></i>39.800 KM</span>
+                            </div>
+                            <div class="car-loc"><i class="fas fa-map-marker-alt"></i> São Paulo (SP)</div>
+                            <div class="car-dealer"><i class="fas fa-store"></i> Prime Motors</div>
+                            <div class="car-price">R$83.900</div>
+                            <a href="detalhes-veiculo.html" class="btn btn-detalhes">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-md-4">
+                    <div class="car-card">
+                        <div class="car-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1611566026373-c6c8da0ea861?w=400&q=80" alt="Toyota Corolla">
+                            <button class="heart-btn"><i class="far fa-heart text-danger" style="font-size:0.78rem;"></i></button>
+                        </div>
+                        <div class="car-body">
+                            <div class="car-name">Toyota Corolla XEI</div>
+                            <div class="car-ver">2.0 Automático</div>
+                            <div class="car-specs">
+                                <span><i class="fas fa-calendar-alt"></i>2022/2023</span>
+                                <span><i class="fas fa-road"></i>32.000 KM</span>
+                            </div>
+                            <div class="car-loc"><i class="fas fa-map-marker-alt"></i> Osasco (SP)</div>
+                            <div class="car-dealer"><i class="fas fa-store"></i> Auto Prime Veículos</div>
+                            <div class="car-price">R$129.900</div>
+                            <a href="detalhes-veiculo.html" class="btn btn-detalhes">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-md-4">
+                    <div class="car-card">
+                        <div class="car-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=400&q=80" alt="Honda Civic">
+                            <button class="heart-btn"><i class="far fa-heart text-danger" style="font-size:0.78rem;"></i></button>
+                        </div>
+                        <div class="car-body">
+                            <div class="car-name">Honda Civic</div>
+                            <div class="car-ver">1.5 Automático</div>
+                            <div class="car-specs">
+                                <span><i class="fas fa-calendar-alt"></i>2021/2022</span>
+                                <span><i class="fas fa-road"></i>28.800 KM</span>
+                            </div>
+                            <div class="car-loc"><i class="fas fa-map-marker-alt"></i> Salvador (BA)</div>
+                            <div class="car-dealer"><i class="fas fa-store"></i> Diamond Motors</div>
+                            <div class="car-price">R$144.900</div>
+                            <a href="detalhes-veiculo.html" class="btn btn-detalhes">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-md-4">
+                    <div class="car-card">
+                        <div class="car-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=400&q=80" alt="Toyota Hilux">
+                            <button class="heart-btn"><i class="far fa-heart text-danger" style="font-size:0.78rem;"></i></button>
+                        </div>
+                        <div class="car-body">
+                            <div class="car-name">Toyota Hilux SRX 4x4</div>
+                            <div class="car-ver">2.8 Turbo Automático</div>
+                            <div class="car-specs">
+                                <span><i class="fas fa-calendar-alt"></i>2023/2023</span>
+                                <span><i class="fas fa-road"></i>18.000 KM</span>
+                            </div>
+                            <div class="car-loc"><i class="fas fa-map-marker-alt"></i> Goiânia (GO)</div>
+                            <div class="car-dealer"><i class="fas fa-store"></i> Forte Motors</div>
+                            <div class="car-price">R$289.900</div>
+                            <a href="detalhes-veiculo.html" class="btn btn-detalhes">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="col-md-4">
+                    <div class="car-card">
+                        <div class="car-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?w=400&q=80" alt="Hyundai Creta">
+                            <button class="heart-btn"><i class="far fa-heart text-danger" style="font-size:0.78rem;"></i></button>
+                        </div>
+                        <div class="car-body">
+                            <div class="car-name">Hyundai Creta</div>
+                            <div class="car-ver">2.0 Turbo Automático</div>
+                            <div class="car-specs">
+                                <span><i class="fas fa-calendar-alt"></i>2021/2022</span>
+                                <span><i class="fas fa-road"></i>24.000 KM</span>
+                            </div>
+                            <div class="car-loc"><i class="fas fa-map-marker-alt"></i> Florianópolis (SC)</div>
+                            <div class="car-dealer"><i class="fas fa-store"></i> Urban Motors</div>
+                            <div class="car-price">R$134.900</div>
+                            <a href="detalhes-veiculo.html" class="btn btn-detalhes">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="col-md-4">
+                    <div class="car-card">
+                        <div class="car-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=400&q=80" alt="Fiat Argo">
+                            <button class="heart-btn"><i class="far fa-heart text-danger" style="font-size:0.78rem;"></i></button>
+                        </div>
+                        <div class="car-body">
+                            <div class="car-name">Fiat Argo Drive</div>
+                            <div class="car-ver">1.0 manual</div>
+                            <div class="car-specs">
+                                <span><i class="fas fa-calendar-alt"></i>2022/2023</span>
+                                <span><i class="fas fa-road"></i>36.000 KM</span>
+                            </div>
+                            <div class="car-loc"><i class="fas fa-map-marker-alt"></i> Belo Horizonte (MG)</div>
+                            <div class="car-dealer"><i class="fas fa-store"></i> Nova Era Veículos</div>
+                            <div class="car-price">R$69.900</div>
+                            <a href="detalhes-veiculo.html" class="btn btn-detalhes">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGINATION -->
+            <!-- <nav>: identifica a paginação como área de navegação para leitores de tela -->
+            <nav class="d-flex justify-content-center mt-2">
+                <!-- <ul>: lista semântica que permite ao leitor de tela anunciar "lista com X itens" -->
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                    <li class="page-item"><a class="page-link" href="#">6</a></li>
+                    <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<!-- <footer>: elemento semântico que delimita o rodapé; leitores de tela permitem pular diretamente para ele -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="footer-logo"><i class="fas fa-tachometer-alt me-2" style="color:#00c4e0;"></i>NFSCars</div>
+                <p class="footer-desc">Marketplace de veículos com agências verificadas</p>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h6>Sobre nós</h6>
+                <ul>
+                    <li><a href="#">Saiba mais sobre nossa história, missão e valores</a></li>
+                    <li><a href="#">Conheça a NFSCars</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-6 mb-4">
+                <h6>Ajuda</h6>
+                <ul>
+                    <li><a href="#">Central de ajuda</a></li>
+                    <li><a href="#">Como anunciar</a></li>
+                    <li><a href="#">Segurança</a></li>
+                    <li><a href="#">Política de privacidade</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-6 mb-4">
+                <h6>Contato</h6>
+                <div class="ci"><i class="fas fa-phone"></i><span>(11) 99999-9999</span></div>
+                <div class="ci"><i class="fas fa-envelope"></i><span>contato@nfscars.com</span></div>
+            </div>
+            <div class="col-lg-2 col-md-6 mb-4">
+                <h6>Redes Sociais</h6>
+                <a href="#" class="social-icon fb"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon ig"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <hr class="footer-hr">
+        <p class="footer-copy">© 2026 ABIGAIU PORTO | BRUNO HENRIQUE | VANESSA ROSA Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
