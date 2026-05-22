@@ -15,25 +15,30 @@
 
 <!-- TOP NAV -->
 <!-- <nav>: elemento semântico que identifica área de navegação para leitores de tela -->
-<nav class="navbar top-nav py-0">
+<nav class="navbar top-nav navbar-expand-lg py-0">
     <div class="container-fluid px-4">
         <a class="navbar-brand" href="index.html">
             <i class="fas fa-tachometer-alt" style="color:#00c4e0;"></i> NFSCars
         </a>
-        <ul class="navbar-nav flex-row">
-            <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-th-large"></i><span>Dashboard</span></a></li>
-            <li class="nav-item active"><a class="nav-link" href="cadastro-veiculo.html"><i class="fas fa-car"></i><span>Veículos</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-users"></i><span>Leads</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-dollar-sign"></i><span>Vendas</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-chart-bar"></i><span>Relatórios</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-cog"></i><span>Configurações</span></a></li>
-        </ul>
-        <div class="user-badge">
-            <div class="text-end">
-                <div class="user-name">Auto Norte Multimarcas</div>
-                <div class="user-type">Agência</div>
+        <button class="navbar-toggler top-nav-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCadastro" aria-controls="navbarCadastro" aria-expanded="false" aria-label="Abrir menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCadastro">
+            <ul class="navbar-nav flex-row flex-lg-row flex-wrap">
+                <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-th-large"></i><span>Dashboard</span></a></li>
+                <li class="nav-item active"><a class="nav-link" href="cadastro-veiculo.html"><i class="fas fa-car"></i><span>Veículos</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-users"></i><span>Leads</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-dollar-sign"></i><span>Vendas</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-chart-bar"></i><span>Relatórios</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-cog"></i><span>Configurações</span></a></li>
+            </ul>
+            <div class="user-badge ms-auto">
+                <div class="text-end">
+                    <div class="user-name">Auto Norte Multimarcas</div>
+                    <div class="user-type">Agência</div>
+                </div>
+                <div class="user-avatar">XP</div>
             </div>
-            <div class="user-avatar">XP</div>
         </div>
     </div>
 </nav>

@@ -1,3 +1,62 @@
+/* ===== MENU HAMBÚRGUER ===== */
+
+/* Ícone hambúrguer branco na navbar escura */
+.navbar-main .navbar-toggler,
+.top-nav .top-nav-toggler {
+    border-color: rgba(255,255,255,0.3);
+    padding: 4px 8px;
+}
+.navbar-main .navbar-toggler-icon,
+.top-nav .top-nav-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255%2c255%2c255%2c0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Mobile: navbar principal */
+@media (max-width: 991.98px) {
+    .navbar-main .navbar-collapse {
+        border-top: 1px solid rgba(255,255,255,0.1);
+        margin-top: 10px;
+        padding-top: 10px;
+        padding-bottom: 6px;
+    }
+    .navbar-main .nav-links-main {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        margin: 0 0 10px 0 !important;
+        gap: 2px !important;
+    }
+    .navbar-main .nav-links-main .nav-link {
+        padding: 8px 4px !important;
+    }
+    .navbar-main .nav-actions-main {
+        border-top: 1px solid rgba(255,255,255,0.1);
+        padding-top: 10px;
+        flex-wrap: wrap;
+    }
+
+    /* Mobile: top-nav cadastro */
+    .top-nav .navbar-collapse {
+        border-top: 1px solid rgba(255,255,255,0.1);
+        padding: 10px 0;
+    }
+    .top-nav .navbar-nav {
+        flex-direction: column !important;
+        flex-wrap: nowrap !important;
+    }
+    .top-nav .nav-item .nav-link {
+        flex-direction: row !important;
+        justify-content: flex-start;
+        gap: 10px;
+        padding: 10px 0 !important;
+        border-bottom: none !important;
+    }
+    .top-nav .user-badge {
+        border-top: 1px solid rgba(255,255,255,0.1);
+        padding-top: 10px;
+        margin-top: 4px;
+    }
+}
+
 /* ===== PÁGINA DE DETALHES ===== */
 
 /* Gallery */
