@@ -1,59 +1,55 @@
 /* ===== MENU HAMBÚRGUER ===== */
 
-/* Ícone hambúrguer branco na navbar escura */
+/* Ícone branco para navbar escura — funciona em todos os navegadores */
 .navbar-main .navbar-toggler,
 .top-nav .top-nav-toggler {
-    border-color: rgba(255,255,255,0.3);
+    border-color: rgba(255,255,255,0.35);
     padding: 4px 8px;
+    outline: none;
+    box-shadow: none;
 }
-.navbar-main .navbar-toggler-icon,
+.navbar-main .navbar-toggler:focus,
+.top-nav .top-nav-toggler:focus {
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.25);
+}
+.navbar-main .navbar-toggler .navbar-toggler-icon,
 .top-nav .top-nav-toggler .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255%2c255%2c255%2c0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    background-size: 1.2em;
 }
 
-/* Mobile: navbar principal */
-@media (max-width: 991.98px) {
-    .navbar-main .navbar-collapse {
-        border-top: 1px solid rgba(255,255,255,0.1);
-        margin-top: 10px;
-        padding-top: 10px;
-        padding-bottom: 6px;
-    }
-    .navbar-main .nav-links-main {
-        flex-direction: column !important;
-        align-items: flex-start !important;
-        margin: 0 0 10px 0 !important;
-        gap: 2px !important;
-    }
-    .navbar-main .nav-links-main .nav-link {
-        padding: 8px 4px !important;
-    }
-    .navbar-main .nav-actions-main {
-        border-top: 1px solid rgba(255,255,255,0.1);
-        padding-top: 10px;
-        flex-wrap: wrap;
-    }
+/* Top-nav desktop: itens em linha */
+.top-nav-list { flex-direction: row !important; }
 
-    /* Mobile: top-nav cadastro */
+/* Mobile (< 992px) */
+@media (max-width: 991.98px) {
+
+    /* Navbar principal */
+    .navbar-main .navbar-collapse {
+        border-top: 1px solid rgba(255,255,255,0.12);
+        padding: 10px 0 6px;
+    }
+    .navbar-main .navbar-nav .nav-link {
+        padding: 9px 6px !important;
+    }
+    .navbar-main .navbar-nav .nav-link:hover { background: rgba(255,255,255,0.07); border-radius: 6px; }
+
+    /* Top-nav cadastro */
     .top-nav .navbar-collapse {
-        border-top: 1px solid rgba(255,255,255,0.1);
-        padding: 10px 0;
+        border-top: 1px solid rgba(255,255,255,0.12);
+        padding: 8px 0;
     }
-    .top-nav .navbar-nav {
-        flex-direction: column !important;
-        flex-wrap: nowrap !important;
-    }
+    .top-nav-list { flex-direction: column !important; }
     .top-nav .nav-item .nav-link {
         flex-direction: row !important;
-        justify-content: flex-start;
+        justify-content: flex-start !important;
         gap: 10px;
-        padding: 10px 0 !important;
+        padding: 10px 4px !important;
         border-bottom: none !important;
     }
     .top-nav .user-badge {
-        border-top: 1px solid rgba(255,255,255,0.1);
+        border-top: 1px solid rgba(255,255,255,0.12);
         padding-top: 10px;
-        margin-top: 4px;
     }
 }
 
